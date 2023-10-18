@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { ethers } from "ethers";
 import { contractAbi, contractAddress } from './utils/constants';
+import FileUpload from './components/FileUpload';
 
 function App() {
   const [account , setAccount] = useState('');
@@ -57,9 +58,13 @@ function App() {
        
        
 
-    <h1 className="text-3xl font-bold underline">
-      Hello world! {account}
-    </h1>
+    <FileUpload
+    account={account}
+    provider= { provider}
+    contract= {contract}
+    >
+
+    </FileUpload>
 
 
     </>
