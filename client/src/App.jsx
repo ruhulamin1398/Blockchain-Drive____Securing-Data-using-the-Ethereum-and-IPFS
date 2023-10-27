@@ -5,7 +5,7 @@ import "./App.css";
 import { ethers } from "ethers";
 import { contractAbi, contractAddress } from './utils/constants';
 import FileUpload from './components/FileUpload'; 
-import Modal from './components/Modal';
+// import Modal from './components/Modal';
 import Display from './components/Display';
 import Navigation from './components/Navigation';
 import Files from './components/Files';
@@ -15,7 +15,7 @@ function App() {
   const [account , setAccount] = useState('');
   const [contract , setContract] = useState('');
   const [provider , setProvider] = useState(''); 
-  const [modalOpen, setModalOpen] = useState(false);
+  // const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(()=>{
     const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -60,24 +60,21 @@ function App() {
 
 
   return (
-    <>
-    <Navigation/>
+    <> 
        
 
-       {!modalOpen && (
+       {/* {!modalOpen && (
         <button className="share" onClick={() => setModalOpen(true)}>
           Share
         </button>
       )}
       {modalOpen && (
         <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
-      )}
+      )} */}
 
       <div className="App">
         <p className='text-5xl text-white font-black'  >G Drive (Ethereup,IPFS ) </p>
-        <div className="bg"></div>
-        <div className="bg bg2"></div>
-        <div className="bg bg3"></div>
+     
 
         <p style={{ color: "white" }}>
           Account : {account ? account : "Not connected"}
@@ -89,9 +86,10 @@ function App() {
         ></FileUpload>
         {/* <Display contract={contract} account={account}></Display> */}
       </div>
+ 
 
 
-      <div className=" bg-black  bg-opacity-75  mx-auto max-w-7xl  sm:px-6   lg:px-8  py-5 md:py-10">
+      <div id='files' className=" bg-black  bg-opacity-75  mx-auto max-w-7xl  sm:px-6   lg:px-8  py-5 md:py-10">
       <Files contract={contract} account={account} title="My Files" />
         </div>
 
