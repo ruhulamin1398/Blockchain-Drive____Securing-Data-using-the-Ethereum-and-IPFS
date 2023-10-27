@@ -74,7 +74,7 @@ function App() {
       )}
 
       <div className="App">
-        <h1 style={{ color: "white" }}>Drive (Ethereup,IPFS ) </h1>
+        <p className='text-5xl text-white font-black'  >G Drive (Ethereup,IPFS ) </p>
         <div className="bg"></div>
         <div className="bg bg2"></div>
         <div className="bg bg3"></div>
@@ -87,11 +87,22 @@ function App() {
           provider={provider}
           contract={contract}
         ></FileUpload>
-        <Display contract={contract} account={account}></Display>
+        {/* <Display contract={contract} account={account}></Display> */}
       </div>
-      <div className=" bg-white mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-      <Files/>
+
+
+      <div className=" bg-black  bg-opacity-75  mx-auto max-w-7xl  sm:px-6   lg:px-8  py-5 md:py-10">
+      <Files contract={contract} account={account} title="My Files" />
         </div>
+
+
+        
+      <div className=" bg-black  bg-opacity-75  mx-auto max-w-7xl  sm:px-6   lg:px-8  py-5 md:py-10">
+      <Files contract={contract} account={account}  title="Shared With Me" shared='1' />
+        </div>
+
+        
+      
 
       
 

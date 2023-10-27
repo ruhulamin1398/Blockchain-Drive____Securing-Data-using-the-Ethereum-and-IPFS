@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./Display.css";
+import Files from "./Files";
 const Display = ({ contract, account }) => {
   const [data, setData] = useState("");
+ 
   const getdata = async () => {
     let dataArray;
     const Otheraddress = document.querySelector(".address").value;
@@ -24,14 +26,24 @@ const Display = ({ contract, account }) => {
       // console.log(str_array);
       const images = str_array.map((item, i) => {
         return (
+          <>
           <a href={item} key={i} target="_blank">
             <img
               key={i}
-              src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
+              // src={`https://gateway.pinata.cloud/ipfs/${item.substring(36)}`}
+              src={`https://gateway.pinata.cloud/ipfs/QmQvi5s12wdKnuNqRuoLHEekY19EBk7bWjne2b1NARwcyi`}
+              
               alt="new"
               className="image-list"
-            ></img>
+              ></img>
           </a>
+
+          
+
+        </>
+
+
+
         );
       });
       setData(images);
@@ -50,6 +62,10 @@ const Display = ({ contract, account }) => {
       <button className="center button" onClick={getdata}>
         Get Data
       </button>
+
+ 
+
+
     </>
   );
 };
