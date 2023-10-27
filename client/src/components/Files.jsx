@@ -69,9 +69,10 @@ export default function Files({ contract, account, shared, title }) {
           <li key={file} className="flex justify-between gap-x-1  py-2 px-4 bg-gray-100 rounded-2xl">
             <div className="flex min-w-0 gap-x-4">
               <img className="h-24 w-24 flex-none rounded-full bg-gray-50" src={file} alt=" Image" />
-              <div className="min-w-0 flex-auto">
-                <a href={file} target="_blank" rel="noopener noreferrer">
-                  <p className="text-sm font-semibold leading-6 text-gray-900 whitespace-normal break-words "> {file.substring(36)}</p>
+              <div className="min-w-0    ">
+                <a href={file} target="_blank"  rel="noopener noreferrer">
+                  <p className="text-sm font-semibold leading-6 text-gray-900 whitespace-normal break-words mb-1 "> {file.substring(36)}</p>
+                <button className="py-1 px-5 border-black border text-sm  ">    View   </button>
                 </a>
 
 
