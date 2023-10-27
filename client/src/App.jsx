@@ -8,6 +8,7 @@ import FileUpload from './components/FileUpload';
 import Modal from './components/Modal';
 import Display from './components/Display';
 import Navigation from './components/Navigation';
+import Files from './components/Files';
  
 
 function App() {
@@ -88,6 +89,11 @@ function App() {
         ></FileUpload>
         <Display contract={contract} account={account}></Display>
       </div>
+      <div className=" bg-white mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+      <Files/>
+        </div>
+
+      
 
     </>
   )
