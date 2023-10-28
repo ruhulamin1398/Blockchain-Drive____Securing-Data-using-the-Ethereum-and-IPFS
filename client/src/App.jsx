@@ -18,6 +18,8 @@ function App() {
   // const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(()=>{
+    if(window.ethereum){
+       
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const loadProvider= async()=>{
       if(provider){
@@ -52,6 +54,11 @@ function App() {
 
 
     provider && loadProvider();
+  }
+
+  else{
+    alert('Please Install Metamusk')
+  }
 
   },
   []
@@ -62,18 +69,10 @@ function App() {
   return (
     <> 
        
-
-       {/* {!modalOpen && (
-        <button className="share" onClick={() => setModalOpen(true)}>
-          Share
-        </button>
-      )}
-      {modalOpen && (
-        <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
-      )} */}
+ 
 
       <div className="App">
-        <p className='text-5xl text-white font-black'  >G Drive (Ethereup,IPFS ) </p>
+        <p className='text-5xl text-white font-black'  >G Drive (Ethereum,IPFS ) </p>
      
 
         <p style={{ color: "white" }}>
@@ -84,7 +83,7 @@ function App() {
           provider={provider}
           contract={contract}
         ></FileUpload>
-        {/* <Display contract={contract} account={account}></Display> */}
+        
       </div>
  
 

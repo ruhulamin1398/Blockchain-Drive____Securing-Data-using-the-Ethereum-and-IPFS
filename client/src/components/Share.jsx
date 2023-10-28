@@ -18,6 +18,9 @@ const Share = () => {
 
 
     useEffect(() => {
+        
+        if(window.ethereum){
+
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const loadProvider = async () => {
             if (provider) {
@@ -48,6 +51,10 @@ const Share = () => {
             }
         }
         provider && loadProvider();
+    }
+    else{
+        alert('Please Install Metamusk')
+    }
 
     },
         []
@@ -55,25 +62,31 @@ const Share = () => {
 
 
     useEffect(() => {
+        if(window.ethereum){
+
         const accessList = async () => {
-            const addressList = await contract.shareAccess();
-            setSharedAddress(addressList);
+            if (provider) {
+                const addressList = await contract.shareAccess();
+                setSharedAddress(addressList);
 
 
-            let select = document.querySelector("#selectNumber");
-            const options = addressList;
-            console.log('addressList', addressList)
-            console.log('options', options)
+                let select = document.querySelector("#selectNumber");
+                const options = addressList;
+                console.log('addressList', addressList)
+                console.log('options', options)
 
-            for (let i = 0; i < options.length; i++) {
-                let opt = options[i];
-                let e1 = document.createElement("option");
-                e1.textContent = opt;
-                e1.value = opt;
-                select.appendChild(e1);
+                for (let i = 0; i < options.length; i++) {
+                    let opt = options[i];
+                    let e1 = document.createElement("option");
+                    e1.textContent = opt;
+                    e1.value = opt;
+                    select.appendChild(e1);
+                }
             }
         };
         contract && accessList();
+    }
+        
     }, [contract]);
 
 
@@ -107,8 +120,12 @@ const Share = () => {
 
 
             <div id='files' className=" bg-black  bg-opacity-75  mx-auto max-w-7xl  sm:px-6   lg:px-8  py-5 md:py-10 my-5">
- 
-                <div className="text-3xl font-bold  shadow-sm text-slate-50   border-bottom-1"> Shared With Files</div> 
+
+                <div className="text-3xl font-bold  shadow-sm text-slate-50   border-bottom-1"> Shared With Files</div>
+
+                <p style={{ color: "white" }}>
+                    {account ? '' : "Please connect your metamusk account to view"}
+                </p>
 
                 <ol className="divide-y divide-black  grid grid-cols-1 md:grid-cols-1  gap-0  ">
                     {sharedAddress.map((address, id) => (

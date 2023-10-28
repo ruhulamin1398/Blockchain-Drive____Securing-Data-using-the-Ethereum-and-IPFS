@@ -49,17 +49,29 @@ export default function Files({ contract, account, shared, title }) {
 
     <div className="text-3xl font-bold  shadow-sm text-slate-50   border-bottom-1"> {title} </div>
  
-      <div className="grid grid-cols-2   w-2/3    left mb-10"> 
+      <div className="grid grid-cols-5   w-2/3   gap-1 left mb-10"> 
       
-      { shared ?  <input
+      { shared ?  <> 
+      <button className=" button  p-2 w-full col-span-1 " onClick={GetAllFiles}>
+      Load Files
+    </button> 
+
+
+    <input
         type="text"
         placeholder="Enter Others Address "
-        className="address w-full left   "
-      />  : ""
-      }
+        className="address w-full  col-span-2   "
+      />
+
+    
+    </> 
+    
+     : 
       <button className=" button  p-2 w-48 " onClick={GetAllFiles}>
-        Load Files
-      </button>
+      Load Files
+    </button>
+      }
+   
       </div>
 
 
