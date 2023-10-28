@@ -72,7 +72,7 @@ function App() {
  
 
       <div className="App">
-        <p className='text-5xl text-white font-black mt-2 md:mt-[150px]'  >G Drive (Ethereum,IPFS ) </p>
+        <p className='text-5xl text-white font-black mt-2 md:mt-[150px]'  >Blockchain Drive (Ethereum,IPFS ) </p>
      
 
         <p style={{ color: "white" }}>
