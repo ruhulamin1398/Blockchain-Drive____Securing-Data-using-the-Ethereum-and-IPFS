@@ -33,6 +33,7 @@ export default function Files({ contract, account, shared, title }) {
       }
     } catch (e) {
       alert("You don't have access");
+      setAllFiles([])
     }
 
 
