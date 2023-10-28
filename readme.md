@@ -10,7 +10,12 @@ Welcome to Blockchain Drive, a decentralized data storage solution that leverage
 **GitHub Repository:** [Blockchain Drive GitHub](https://github.com/ruhulamin1398/Blockchain-Drive____Securing-Data-using-the-Ethereum-and-IPFS.git)
 
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/o9oqNeTxKJQ" title="Blockchain Drive: Securing Data on the Ethereum &amp; IPFS  | etherjs | reactjs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+## Watch the Project Overview Video
+
+[![Blockchain Drive Overview](https://img.youtube.com/vi/o9oqNeTxKJQ/0.jpg)](https://www.youtube.com/watch?v=o9oqNeTxKJQ)
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/o9oqNeTxKJQ" title="Blockchain Drive: Securing Data on the Ethereum & IPFS  | etherjs | reactjs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 
 ## Screen Shots 
