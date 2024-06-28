@@ -1,16 +1,11 @@
 # Blockchain Drive: Securing Data on the Ethereum & IPFS
 
 
-
-
 Welcome to Blockchain Drive, a decentralized data storage solution that leverages the power of Ethereum and IPFS to securely store and manage your data.
 
-**Project Link:** [http://3.82.97.134:5050/](http://3.82.97.134:5050/)
-
+**Project Link:** [http://blockchain-drive.ruhul.info](http://blockchain-drive.ruhul.info/)
 
 **Youtube Link:** [https://www.youtube.com/watch?v=o9oqNeTxKJQ]( https://www.youtube.com/watch?v=o9oqNeTxKJQ)
- 
-
 
 **GitHub Repository:** [Blockchain Drive GitHub](https://github.com/ruhulamin1398/Blockchain-Drive____Securing-Data-using-the-Ethereum-and-IPFS.git)
 
